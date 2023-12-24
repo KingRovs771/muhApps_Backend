@@ -1,0 +1,36 @@
+{
+  "name": "muhapps_backend",
+  "version": "1.0.0",
+  "description": "Server for Apps Muhammadiyah Sragen",
+  "main": "app/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "node app/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KingRovs771/muhApss_Backend.git"
+  },
+  "keywords": [
+    "muhammadiyah",
+    "apps",
+    "school"
+  ],
+  "author": "KingRovs",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KingRovs771/muhApss_Backend/issues"
+  },
+  "homepage": "https://github.com/KingRovs771/muhApss_Backend#readme",
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "dotenv": "^16.3.1",
+    "express": "^4.18.2",
+    "ip": "^1.1.8",
+    "json-groupby": "^1.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "md5": "^2.3.0",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1"
+  }
+}
