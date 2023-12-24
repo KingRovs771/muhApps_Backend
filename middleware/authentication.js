@@ -45,9 +45,18 @@ exports.loginUser = function (req, res) {
           if (error) {
             console.log(error);
           } else {
-            res.json(rows);
+            res.json({
+              Success: true,
+              Message: 'Token Berhasil Di Generate',
+              Token: token,
+              userId: data.uuid_user,
+              nama_lengkap: rows[0].nama_lengkap,
+              expired: expired,
+            });
           }
         });
+      } else {
+        res.json({ Error: true, Message: 'Email or Password Invalid, Please Try Again !!' });
       }
     }
   });
