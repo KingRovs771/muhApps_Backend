@@ -20,7 +20,12 @@ exports.loginUser = function (req, res) {
 
   dbexec.query(queryLogin, function (error, rows) {
     if (error) {
-      console.log(error);
+      //console.log(error);
+      res.json({
+        Error: true,
+        Messgae: 'Server sedang bermasalah mohon coba lagi',
+        values: error,
+      });
     } else {
       if (rows.length == 1) {
         let token = jwt.sign({ rows }, config.secret, {
@@ -33,7 +38,7 @@ exports.loginUser = function (req, res) {
 
         let data = {
           uuid_user: userId,
-          access_token: token,
+          generate_token: token,
           ip_address: ip.address(),
         };
 
